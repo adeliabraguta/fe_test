@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.tab {
+  height: 25rem;
+  width: 40rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-rows:  min-content;
+  gap: 2rem;
+  font-weight: 500;
+  @media (max-width: 800px) {
+    width: 22rem;
+    height: 35rem;
+    padding: 1rem;
+  }
+
+
+  .tab__navigation {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+
+    .tab__navigation__item {
+      cursor: pointer;
+      color: #d9dde3;
+      transition: color 0.3s ease;
+    }
+
+    .tab__navigation__item--active {
+      color: #f27ec0;
+    }
+  }
+
+  .tab__components {
+    border: 0.2rem solid #d9dde3;
+    border-radius: 0.5rem;
+    padding: 3rem;
+    overflow: hidden;
+    @media (max-width: 800px) {
+      padding: 2rem;
+    }
+
+
+    .tab__components__item {
+      height: 0;
+      width: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+
+    .tab__components__item--active {
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .tab__components__item__my-fonts {
+      display: flex;
+    }
+
+    .tab__components__item__buy-fonts {
+      display: grid;
+      grid-template-columns:1fr 2fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 5rem;
+      row-gap: 2rem;
+      @media (max-width: 800px) {
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr;
+        column-gap: 5rem;
+        row-gap: 2rem;
+      }
+
+      .card-component {
+        .card-component__input {
+          display: none;
+        }
+
+        .card-component__label {
+          cursor: pointer;
+          display: grid;
+          grid-template-columns: min-content auto;
+          align-items: center;
+          gap: 2rem;
+
+          .card-component__square {
+            margin: 0.4rem;
+            border-radius: 1rem;
+            outline: 0.1rem solid rgba(49, 53, 58, 0.5);
+            outline-offset: 0.2rem;
+            position: relative;
+            width: 5.5em;
+            height: 5.5rem;
+
+            &:before {
+              content: attr(data-before);
+              position: absolute;
+              bottom: 0.4rem;
+              left: 0.8rem;
+              font-size: 1.7rem;
+              color: white;
+              opacity: 40%;
+              font-weight: 800;
+            }
+          }
+
+          .card-component__text {
+            color: rgba(49, 53, 58, 0.5);
+            list-style-position: outside;
+            margin-left: 1.5rem;
+            position: relative;
+
+            &:before {
+              content: "";
+              position: absolute;
+              top: 1.2rem;
+              left: -20px;
+              margin-top: -.9rem;
+              background: #d9dde3;
+              height: 0.6rem;
+              width: 0.6rem;
+              border-radius: 50%;
+            }
+          }
+
+        }
+
+        .card-component__input[type="radio"]:checked + .card-component__label {
+          .card-component__square {
+            outline: 0.1rem solid rgba(49, 53, 58, 1);
+          }
+
+          .card-component__text {
+            color: rgba(49, 53, 58, 1);
+          }
+
+          .card-component__text::before {
+            background: rgba(49, 53, 58, 0.5);
+          }
+        }
+      }
+
+      .card-component:first-of-type {
+        grid-row: 1/3;
+
+        .card-component__label {
+          grid-template-columns: auto;
+          @media (max-width: 800px) {
+            grid-template-columns: min-content auto;
+          }
+        }
+
+        .card-component__square {
+          width: 7rem;
+          height: 7rem;
+          background-color: #04a454;
+          @media (max-width: 800px) {
+            width: 5.5rem;
+            height: 5.5rem;
+          }
+
+          &:before {
+            font-size: 2.5rem;
+            @media (max-width: 800px) {
+              font-size: 1.7rem;
+            }
+          }
+        }
+      }
+
+      .card-component:nth-of-type(2) {
+        .card-component__square {
+          background-color: #f27ec0;
+        }
+      }
+
+      .card-component:nth-of-type(3) {
+        .card-component__square {
+          background-color: #056cfc;
+        }
+      }
+    }
+  }
+}

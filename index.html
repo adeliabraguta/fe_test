@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<div class="tab">
+    <div class="tab__navigation">
+        <div class="tab__navigation__item " data-tab-target="tab-1">MY FONTS</div>
+        <div class="tab__navigation__item tab__navigation__item--active" data-tab-target="tab-2">BUY FONTS</div>
+    </div>
+    <div class="tab__components">
+        <div class=" tab__components__item " id="tab-1">
+            <div class="tab__components__item__my-fonts">
+                <div>sdfsdfds</div>
+            </div>
+        </div>
+        <div class="tab__components__item tab__components__item--active " id="tab-2">
+            <div class="tab__components__item__buy-fonts">
+                <div class="card-component">
+                    <input class="card-component__input" type="radio" id="card_1" name="card_group">
+                    <label class="card-component__label" for="card_1">
+                        <div class="card-component__square" data-before="M"></div>
+                        <p class="card-component__text">Merriweather project is led by Sorkin Type</p>
+                    </label>
+                </div>
+                <div class=" card-component">
+                    <input class="card-component__input" type="radio" id="card_2" name="card_group">
+                    <label class="card-component__label" for="card_2">
+                        <div class="card-component__square" data-before="R"></div>
+                        <p class="card-component__text">Roboto doesn't compromise, allowing letters</p>
+                    </label>
+                </div>
+                <div class=" card-component">
+                    <input class="card-component__input" type="radio" id="card_3" name="card_group">
+                    <label class="card-component__label" for="card_3">
+                        <div class="card-component__square" data-before="NS"></div>
+                        <p class="card-component__text">Noto Sans covers over 30 scripts</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
