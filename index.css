@@ -88,14 +88,14 @@ body {
 .tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__input {
   display: none;
 }
-.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__label {
+.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__content {
   cursor: pointer;
   display: grid;
   grid-template-columns: min-content auto;
   align-items: center;
   gap: 2rem;
 }
-.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__label .card-component__square {
+.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__content .card-component__square {
   margin: 0.4rem;
   border-radius: 1rem;
   outline: 0.1rem solid rgba(49, 53, 58, 0.5);
@@ -104,7 +104,7 @@ body {
   width: 5.5em;
   height: 5.5rem;
 }
-.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__label .card-component__square:before {
+.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__content .card-component__square:before {
   content: attr(data-before);
   position: absolute;
   bottom: 0.4rem;
@@ -114,13 +114,13 @@ body {
   opacity: 40%;
   font-weight: 800;
 }
-.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__label .card-component__text {
+.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__content .card-component__label {
   color: rgba(49, 53, 58, 0.5);
   list-style-position: outside;
   margin-left: 1.5rem;
   position: relative;
 }
-.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__label .card-component__text:before {
+.tab .tab__components .tab__components__item__buy-fonts .card-component .card-component__content .card-component__label:before {
   content: "";
   position: absolute;
   top: 1.2rem;
@@ -143,11 +143,11 @@ body {
 .tab .tab__components .tab__components__item__buy-fonts .card-component:first-of-type {
   grid-row: 1/3;
 }
-.tab .tab__components .tab__components__item__buy-fonts .card-component:first-of-type .card-component__label {
+.tab .tab__components .tab__components__item__buy-fonts .card-component:first-of-type .card-component__content {
   grid-template-columns: auto;
 }
 @media (max-width: 800px) {
-  .tab .tab__components .tab__components__item__buy-fonts .card-component:first-of-type .card-component__label {
+  .tab .tab__components .tab__components__item__buy-fonts .card-component:first-of-type .card-component__content {
     grid-template-columns: min-content auto;
   }
 }

@@ -94,7 +94,7 @@ body {
           display: none;
         }
 
-        .card-component__label {
+        .card-component__content {
           cursor: pointer;
           display: grid;
           grid-template-columns: min-content auto;
@@ -122,7 +122,7 @@ body {
             }
           }
 
-          .card-component__text {
+          .card-component__label {
             color: rgba(49, 53, 58, 0.5);
             list-style-position: outside;
             margin-left: 1.5rem;
@@ -161,7 +161,7 @@ body {
       .card-component:first-of-type {
         grid-row: 1/3;
 
-        .card-component__label {
+        .card-component__content {
           grid-template-columns: auto;
           @media (max-width: 800px) {
             grid-template-columns: min-content auto;
